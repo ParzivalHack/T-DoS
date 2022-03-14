@@ -20,7 +20,6 @@ bytes = random._urandom(1490)
 
 os.system("clear")
 os.system("figlet T-DoS")
-print
 print "Coded By : ParzivalHack"
 print "Github   : github.com/ParzivalHack"
 print "Disclaimer: Illicit use of this tool could lead to a violation of federal and local laws."
