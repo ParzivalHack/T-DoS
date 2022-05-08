@@ -28,7 +28,7 @@ print("Disclaimer: Illecit use of this tool could lead to a violation of federal
 print("Use this tool only on your own website or websites from which you have obtained permission.")
 print("License: The source code of this tool is under the MIT License. © 2022 Tommaso Bona")
 print()
-ip = str(input("Target's IP:"))
+ip = str(input("Target's IP(IP finder: www.site24x7.com/find-ip-address-of-web-site.html):"))
 port = int(input("Port number (80 and 443 suggested): "))
 pack = int(input("Number of packets: "))
 thread = int(input("Number of threads: "))
