@@ -11,13 +11,13 @@ Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service
 * pip install -r requirements.txt
 
 # Usage
-- $ cd T-DoS
-- $ chmod +x T-DoS.py
-- $ python T-DoS.py
+* cd T-DoS
+* * chmod +x T-DoS.py
+* * python T-DoS.py
 
 # Update
-cd T-DoS
-bash update.sh
+* cd T-DoS
+* bash update.sh
 
 # License
 This tool is under the MIT License.
