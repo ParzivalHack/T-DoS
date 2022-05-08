@@ -7,7 +7,7 @@ Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service
 * pkg install python2
 * pkg install git
 * pkg install figlet
-* $ git clone https://github.com/ParzivalHack/T-DoS
+* git clone https://github.com/ParzivalHack/T-DoS
 * pip install -r requirements.txt
 
 # Usage
