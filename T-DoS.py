@@ -20,11 +20,11 @@ bytes = random._urandom(1490)
 
 os.system("clear")
 os.system("figlet T-DoS")
-print "Coded By : ParzivalHack"
-print "Github   : github.com/ParzivalHack"
-print "Disclaimer: Illicit use of this tool could lead to a violation of federal and local laws."
-print "Use this tool only on your own website or websites from which you have obtained permission."
-print "License: The source code of this tool is under the MIT License. © 2022 Tommaso Bona"
+print("Coded By : ParzivalHack")
+print("Github   : github.com/ParzivalHack")
+print("Disclaimer: Illicit use of this tool could lead to a violation of federal and local laws.")
+print("Use this tool only on your own website or websites from which you have obtained permission.")
+print("License: The source code of this tool is under the MIT License. © 2022 Tommaso Bona")
 print
 ip = raw_input("IP Target : ")
 port = input("Port       : ")
