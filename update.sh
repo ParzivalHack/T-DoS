@@ -30,12 +30,3 @@ clear
 cd $HOME
 cd T-DoS
 python T-DoS.py
-}
-vid(){
-FILE=$HOME/T-DoS
-if [ -f "$FILE" ]; then
-pop
-else
-echo
-fi
-}
