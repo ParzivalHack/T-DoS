@@ -12,8 +12,8 @@ Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service
 
 # Usage
 * cd T-DoS
-* * chmod +x T-DoS.py
-* * python T-DoS.py
+* chmod +x T-DoS.py
+* python T-DoS.py
 
 # Update
 * cd T-DoS
