@@ -4,8 +4,8 @@ import socket
 import threading
 os.system("clear")
 os.system("toilet T-DoS")
-print("Coded By : ParzivalHack")
-print("Github   : github.com/ParzivalHack")
+print("Coded By: ParzivalHack")
+print("Github: https://github.com/ParzivalHack")
 print("Disclaimer: Illecit use of this tool could lead to a violation of federal and local laws.")
 print("Use this tool only on your own website or websites from which you have obtained permission.")
 print("License: The source code of this tool is under the MIT License.")
@@ -24,7 +24,7 @@ def attack():
 
         global attack_num
         attack_num += 1
-        print(attack_num + "packets sent")
+        print((attack_num) + ("packets sent"))
 
         s.close()
 for i in range(500):
