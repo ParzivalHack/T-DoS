@@ -11,8 +11,8 @@ print("Use this tool only on your own website or websites from which you have ob
 print("License: The source code of this tool is under the MIT License.")
 print("© 2022 Tommaso Bona")
 print("Website IP finder: www.site24x7.com/find-ip-address-of-web-site.html")
-target = str(input("Insert Target:"))
-port = int(input("Insert Port:"))
+target = str(input("Insert Target: "))
+port = int(input("Insert Port: "))
 fake_ip = '44.197.175.168'
 attack_num = 0
 def attack():
