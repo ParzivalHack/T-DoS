@@ -25,9 +25,9 @@ def attack():
 
         global attack_num
         attack_num += 1
-        print(attack_num)
+        print(attack_num + "packets sent!")
 
         s.close()
 for i in range(Trd):
     thread = threading.Thread(target = attack)
-    thread.start()    
+    thread.start()
