@@ -25,7 +25,7 @@ def attack():
 
         global attack_num
         attack_num += 1
-        print(attack_num + "packets sent!")
+        print(attack_num)
 
         s.close()
 for i in range(Trd):
