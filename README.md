@@ -1,5 +1,6 @@
 # What's a DoS/DDoS attack?
 Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service (DoS) attacks. A DDoS attack involves multiple connected online devices, collectively known as a botnet, which are used to overwhelm a target website with fake traffic.
+
 As you can see from the image below, there are 14 different types of DoS/DDoS attacks; the tool i developed, T-DoS, is able to do attack number 3 (TCP SYN Flood) and number 6 (HTTP Flood).
 ![image](https://user-images.githubusercontent.com/82817793/205066388-55fb2697-e1f6-4214-8b5f-1d903bd61567.png)
 P.s. my goal is to add, to T-DoS, all 14 types of attacks.
