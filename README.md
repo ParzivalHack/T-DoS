@@ -3,7 +3,8 @@ Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service
 
 As you can see from the image below, there are 14 different types of DoS/DDoS attacks; the tool i developed, T-DoS, is able to do attack number 3 (TCP SYN Flood) and number 6 (HTTP Flood).
 ![image](https://user-images.githubusercontent.com/82817793/205066388-55fb2697-e1f6-4214-8b5f-1d903bd61567.png)
-P.s. my goal is to add, to T-DoS, all 14 types of attacks.
+
+P.s. my goal is to slowly add, to T-DoS, all 14 types of attacks.
 
 # What's T-DoS?
 T-DoS is a Multi-Purpose DoS Tool,written in Python 2, right now capable of doing "only" 2 out of 14 types of DoS Attacks. It's meant to be used for Pentesting, but can also be used for testing of your own network (like your own router, website or webserver) and researching. It has an easy-to-use cli wizard interface, perfect for beginners, and right now it works on Termux, Kali Linux and ParrotOS.
