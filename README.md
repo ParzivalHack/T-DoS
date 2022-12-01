@@ -6,12 +6,13 @@ Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service
 * pip install python
 * pip install python2
 * pip install git
-* pip install toilet
+* apt-get install toilet
+* pip install scapy
 * git clone https://github.com/ParzivalHack/T-DoS
 
 # Usage
 * cd T-DoS
-* python T-DoS.py
+* python2 T-DoS.py
 
 # Update
 * cd T-DoS
@@ -19,5 +20,3 @@ Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service
 
 # License
 This tool is under the MIT License.
-
-© 2022 Tommaso Bona
