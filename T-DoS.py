@@ -81,10 +81,10 @@ def main():
     print(option)
     if option == 1:
         os.system("clear")
-	    print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
-	    print("because of sockets permissions.")
-	    time.sleep(5)
-	    print("  ______    ____       _____")
+	print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
+	print("because of sockets permissions.")   
+	time.sleep(5)
+	print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
@@ -95,7 +95,7 @@ def main():
         SYN_Flood(dstIP,dstPort,int(counter))
     elif option == 2:
         os.system("clear")
-	    print("  ______    ____       _____")
+	print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
