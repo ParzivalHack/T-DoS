@@ -59,6 +59,11 @@ def SYN_Flood(dstIP,dstPort,counter):
 		total+=1
 
 	stdout.write("\nTotal packets sent: %i\n" % total)
+def Ping_sl():
+	ip = raw_input("Target IP: ")
+        ping_number = int(input("Number of pings (5000 suggested): "))
+        for a in range(ping_number):
+		os.system(f"ping {ip}")
 
 
 def main():
@@ -112,10 +117,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        ip = raw_input("Target IP: ")
-        ping_number = int(input("Number of pings (5000 suggested): "))
-        for a in range(ping_number):
-		os.system(f"ping {ip}")
+        Ping_sl()
     elif option == 4:
 	os.system("clear")
 	print("  ______    ____       _____")
