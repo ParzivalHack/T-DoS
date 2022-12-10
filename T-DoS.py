@@ -112,7 +112,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        ip = str(input("Target IP: "))
+        ip = raw_input("Target IP: ")
         ping_number = int(input("Number of pings (5000 suggested): "))
         for a in range(ping_number):
 		os.system(f"ping {ip}")
@@ -123,8 +123,8 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	ip_addr = input("Target IP: ") 
-        pings = input("Number of pings: ")
+	ip_addr = raw_input("Target IP: ") 
+        pings = int(input("Number of pings: "))
         stream = os.popen(f'ping -c {pings}'.format(ip_addr)) 
         output = stream.read() 
         if '0 received' in output:
