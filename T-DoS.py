@@ -61,9 +61,9 @@ def SYN_Flood(dstIP,dstPort,counter):
 	stdout.write("\nTotal packets sent: %i\n" % total)
 def Ping_sl():
 	ip = raw_input("Target IP: ")
-        ping_number = input("Number of pings (5000 suggested): ")
+	ping_number = input("Number of pings: ")
         for a in range(ping_number):
-		os.system("ping" + ping_number)
+		os.system("ping" + ip)
 
 
 def main():
