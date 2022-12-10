@@ -125,8 +125,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	ip_addr = input("Target IP: ") 
-	pings = input("Number of pings: ")
+	ip_addr = raw_input("Target IP: ") 
 	stream = os.popen('ping -c 5000 {}'.format(ip_addr))
 	output = stream.read() 
 	if '0 received' in output:
