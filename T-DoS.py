@@ -127,7 +127,7 @@ def main():
         print("/_/     /_____/\____/____/  ")
 	ip_addr = input("Target IP: ") 
 	pings = input("Number of pings: ")
-	stream = os.popen(f'ping -c {pings}'.format(ip_addr)) 
+	stream = os.popen('ping -c 5000 {}'.format(ip_addr))
 	output = stream.read() 
 	if '0 received' in output:
 		print('IP unreachable')
