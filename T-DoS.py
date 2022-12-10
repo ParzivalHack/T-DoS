@@ -63,7 +63,7 @@ def Ping_sl():
 	ip = raw_input("Target IP: ")
         ping_number = int(input("Number of pings (5000 suggested): "))
         for a in range(ping_number):
-		os.system(f"ping {ip}")
+		os.system(f'ping {ip}')
 
 
 def main():
