@@ -1,13 +1,13 @@
 # What's a DoS/DDoS attack?
 Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service (DoS) attacks. A DDoS attack involves multiple connected online devices, collectively known as a botnet, which are used to overwhelm a target website with fake traffic.
 
-As you can see from the image below, there are 14 different types of DoS/DDoS attacks; the tool i developed, T-DoS, is able to do attack number 3 (TCP SYN Flood) and number 6 (HTTP Flood).
+As you can see from the image below, there are 14 different types of DoS/DDoS attacks; the tool i developed, T-DoS, is able to do TCP SYN Flood Attack (Number 3), HTTP Flood (Number 6), Slowloris Ping Attack (Number 14) and Ping Flood Attack.
 ![image](https://user-images.githubusercontent.com/82817793/205066388-55fb2697-e1f6-4214-8b5f-1d903bd61567.png)
 
 P.s. my goal is to slowly add, to T-DoS, all 14 types of attacks.
 
 # What's T-DoS?
-T-DoS is a Multi-Purpose DoS Tool,written in Python 2, right now capable of doing "only" 2 out of 14 types of DoS Attacks. It's meant to be used for Pentesting, but can also be used for testing of your own network (like your own router, website or webserver) and researching. It has an easy-to-use cli wizard interface, perfect for beginners, and right now it works on Termux, Kali Linux and ParrotOS.
+T-DoS is a Multi-Purpose DoS Tool,written in Python 2, right now capable of doing "only" 4 out of 14 types of DoS Attacks. It's meant to be used for Pentesting, but can also be used for testing of your own network (like your own router, website or webserver) and researching. It has an easy-to-use cli wizard interface, perfect for beginners, and right now it works on Termux, Kali Linux and ParrotOS.
 ![image](https://user-images.githubusercontent.com/82817793/205043846-76593365-e265-40f9-9431-846f0398a9aa.png)
 
 # Installation of T-DoS
