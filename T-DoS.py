@@ -90,6 +90,7 @@ def main():
     print("2) HTTP Flood Attack")
     print("3) Slowloris Ping Attack")
     print("4) Ping Flood Attack")
+    print("5) Ping of Death Attack")
     option = int(input("Choose an option: "))
     print(option)
     if option == 1:
