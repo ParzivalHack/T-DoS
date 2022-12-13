@@ -5,7 +5,7 @@ import os
 import socket
 import threading
 import time
-os.sys.path.append('/usr/bin/')
+os.sys.path.append('/usr/local/lib/python2.7/site-packages')
 from scapy.all import *
 fake_ip = '44.197.175.168'
 attack_num = 0
