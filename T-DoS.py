@@ -2,7 +2,6 @@ from os import system
 from sys import stdout
 from random import randint
 import os
-from concurrent.futures import thread
 import socket
 import threading
 import time
