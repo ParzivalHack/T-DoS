@@ -18,7 +18,7 @@ T-DoS is a Multi-Purpose DoS Tool,written in Python 2, right now capable of doin
 * pip install python
 * pip install python2
 * pip install git
-* pip install scapy (if you have Python 3.10 or more, even if you already installed scapy, do this command: ´ ´ ´python2 -m pip install scapy[basic]´ ´ ´ )
+* pip install scapy (if you have Python 3 or more, even if you already installed scapy, execute this command: ```python2 -m pip install scapy[basic]```)
 * git clone https://github.com/ParzivalHack/T-DoS
 
 # Usage
