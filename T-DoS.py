@@ -1,6 +1,6 @@
 from os import system
 from sys import stdout
-from scapy.all import *
+from scapy import *
 from random import randint
 import os
 from concurrent.futures import thread
