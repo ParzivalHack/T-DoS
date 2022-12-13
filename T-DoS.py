@@ -1,12 +1,13 @@
 from os import system
 from sys import stdout
-from scapy.all import *
 from random import randint
 import os
 from concurrent.futures import thread
 import socket
 import threading
 import time
+os.sys.path.append('/usr/bin/')
+from scapy.all import *
 fake_ip = '44.197.175.168'
 attack_num = 0
 def Attack(target, port):
