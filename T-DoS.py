@@ -120,7 +120,7 @@ def main():
             
             s.close()
             for i in range(500):
-                thread = threading.Thread(target = target)
+                thread = threading.Thread(target = 0)
                 thread.start()
     elif option == 3:
         os.system("clear")
