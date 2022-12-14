@@ -94,7 +94,7 @@ def main():
     print("2) HTTP Flood Attack (Work in progress)")
     print("3) Slowloris Ping Attack")
     print("4) Ping Flood Attack")
-    print("5) Ping of Death Attack")
+    print("5) Ping of Death Attack (Doesn't work on Termux)")
     print("6) ICMP Flood Attack (Doesn't work on Termux)")
     option = int(input("Choose an option: "))
     print(option)
