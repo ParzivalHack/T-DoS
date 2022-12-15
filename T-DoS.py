@@ -123,9 +123,9 @@ def main():
         target = str(input("Target IP: "))
         port = int(input("Target Port (80 suggested): "))
         Attack(target, port)
-	for i in range(500):
-                thread = threading.Thread(target = 0)
-                thread.start()
+    for i in range(500):
+        thread = threading.Thread(target = 0)
+        thread.start()
     elif option == 3:
         os.system("clear")
         print("  ______    ____       _____")
