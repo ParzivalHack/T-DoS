@@ -35,3 +35,6 @@ Disclaimer: Illecit use of this tool could lead to a violation of federal and lo
 
 # License
 This tool is under the MIT License.
+
+# Special Thanks
+Thanks to @EpicBen146 for helping me testing T-DoS.
