@@ -28,7 +28,7 @@ Disclaimer: Illecit use of this tool could lead to a violation of federal and lo
 * bash update.sh
 
 # Screenshots
-SYN Flood:
+## SYN Flood:
 ![image](https://user-images.githubusercontent.com/82817793/208090844-f0ce76cf-0391-486b-8fb3-f73dee905a34.png)
 
 HTTP Flood:
