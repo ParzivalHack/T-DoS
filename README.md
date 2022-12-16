@@ -31,22 +31,22 @@ Disclaimer: Illecit use of this tool could lead to a violation of federal and lo
 ## SYN Flood:
 ![image](https://user-images.githubusercontent.com/82817793/208090844-f0ce76cf-0391-486b-8fb3-f73dee905a34.png)
 
-HTTP Flood:
+## HTTP Flood:
 ![image](https://user-images.githubusercontent.com/82817793/208091769-748a2b25-a6d6-459a-8f4d-1cf38b243395.png)
 
-Slowloris Ping:
+## Slowloris Ping:
 ![image](https://user-images.githubusercontent.com/82817793/208091997-c28d9301-c007-48e4-afc2-62f1ad9aed57.png)
 
-Ping Flood:
+## Ping Flood:
 *No images avaiable*
 
-Ping of Death:
+## Ping of Death:
 ![image](https://user-images.githubusercontent.com/82817793/208092416-756145a5-28df-4cc2-9981-79cf72fc7294.png)
 
-ICMP Flood:
+## ICMP Flood:
 ![image](https://user-images.githubusercontent.com/82817793/208092684-d4c95f63-fd75-4e61-aafb-d59ff628be7f.png)
 
-IP Fragmentation Flood:
+## IP Fragmentation Flood:
 ![image](https://user-images.githubusercontent.com/82817793/208092803-9e455cba-766e-4e92-a513-7c283ffb1ddd.png)
 
 
