@@ -26,13 +26,14 @@ T-DoS is a Multi-Purpose DoS Tool, written in Python 3, right now capable of doi
 Disclaimer: Illecit use of this tool could lead to a violation of federal and local laws. Use this tool only on your own network or on networks from which you have obtained permission. The creator of this tool, CANNOT be held liable for any misuse of it.
 * cd T-DoS
 * python2 T-DoS.py
-![image](https://user-images.githubusercontent.com/82817793/205044426-c1189d3c-ada5-4800-9be6-775a2bbbf3a9.png)
-![image](https://user-images.githubusercontent.com/82817793/207298157-4824bf5c-c1ba-4341-a934-b7177eb81019.png)
-
 
 # Update
 * cd T-DoS
 * bash update.sh
+
+# Screenshots
+![image](https://user-images.githubusercontent.com/82817793/208091289-086d337e-f3a4-4d2f-9c15-749e74dab156.png)
+
 
 # License
 This tool is under the MIT License.
