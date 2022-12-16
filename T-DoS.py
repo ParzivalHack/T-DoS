@@ -188,6 +188,7 @@ def main():
             print("===================================================")
             fragment.show() #displays each fragment
             counter+=1
-            send(fragment)
+            while(1):
+                send(fragment)
 if __name__ == "__main__":
     main()
