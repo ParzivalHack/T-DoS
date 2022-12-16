@@ -179,9 +179,9 @@ def main():
         dip=str(input("Target IP: "))
         payload="A"*496+"B"*500
         packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
-
-        frags=fragment(packet,fragsize=500)
         global fragment
+        frags=fragment(packet,fragsize=500)
+
         counter=1
         for fragment in frags:
             print("Packet Number: "+str(counter))
