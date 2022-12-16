@@ -9,7 +9,8 @@ P.s. my goal is to slowly add, to T-DoS, all 14 types of attacks.
 
 # What's T-DoS?
 T-DoS is a Multi-Purpose DoS Tool, written in Python 3, right now capable of doing "only" 7 out of 14 types of DoS Attacks. It's meant to be used for Pentesting, but can also be used for testing of your own network (like your own router, website or webserver) and researching. It has an easy-to-use cli wizard interface, perfect for beginners, and right now it works on Termux, Kali Linux and ParrotOS.
-![image](https://user-images.githubusercontent.com/82817793/207298404-77583dd4-e2cd-4dc9-9895-e74804587b78.png)
+
+![image](https://user-images.githubusercontent.com/82817793/208090844-f0ce76cf-0391-486b-8fb3-f73dee905a34.png)
 
 
 
