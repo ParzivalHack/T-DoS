@@ -9,8 +9,26 @@ P.s. my goal is to slowly add, to T-DoS, all 14 types of attacks.
 
 # What's T-DoS?
 T-DoS is a Multi-Purpose DoS Tool, written in Python 3, right now capable of doing "only" 7 out of 14 types of DoS Attacks. It's meant to be used for Pentesting, but can also be used for testing of your own network (like your own router, website or webserver) and researching. It has an easy-to-use cli wizard interface, perfect for beginners, and right now it works on Termux, Kali Linux and ParrotOS.
-
+SYN Flood:
 ![image](https://user-images.githubusercontent.com/82817793/208090844-f0ce76cf-0391-486b-8fb3-f73dee905a34.png)
+
+HTTP Flood:
+![image](https://user-images.githubusercontent.com/82817793/208091769-748a2b25-a6d6-459a-8f4d-1cf38b243395.png)
+
+Slowloris Ping:
+![image](https://user-images.githubusercontent.com/82817793/208091997-c28d9301-c007-48e4-afc2-62f1ad9aed57.png)
+
+Ping Flood:
+*No images avaiable*
+
+Ping of Death:
+![image](https://user-images.githubusercontent.com/82817793/208092416-756145a5-28df-4cc2-9981-79cf72fc7294.png)
+
+ICMP Flood:
+![image](https://user-images.githubusercontent.com/82817793/208092684-d4c95f63-fd75-4e61-aafb-d59ff628be7f.png)
+
+IP Fragmentation Flood:
+![image](https://user-images.githubusercontent.com/82817793/208092803-9e455cba-766e-4e92-a513-7c283ffb1ddd.png)
 
 
 
