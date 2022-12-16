@@ -10,6 +10,8 @@ P.s. my goal is to slowly add, to T-DoS, all 14 types of attacks.
 # What's T-DoS?
 T-DoS is a Multi-Purpose DoS Tool, written in Python 3, right now capable of doing "only" 7 out of 14 types of DoS Attacks. It's meant to be used for Pentesting, but can also be used for testing of your own network (like your own router, website or webserver) and researching. It has an easy-to-use cli wizard interface, perfect for beginners, and right now it works on Termux, Kali Linux and ParrotOS.
 
+![image](https://user-images.githubusercontent.com/82817793/208090844-f0ce76cf-0391-486b-8fb3-f73dee905a34.png)
+
 # Installation of T-DoS
 * apt update && apt upgrade
 * pip install python
@@ -29,7 +31,8 @@ Disclaimer: Illecit use of this tool could lead to a violation of federal and lo
 
 # Screenshots
 ## SYN Flood:
-![image](https://user-images.githubusercontent.com/82817793/208090844-f0ce76cf-0391-486b-8fb3-f73dee905a34.png)
+![image](https://user-images.githubusercontent.com/82817793/208093713-22862d80-b536-410a-9408-b71be2738449.png)
+
 
 ## HTTP Flood:
 ![image](https://user-images.githubusercontent.com/82817793/208091769-748a2b25-a6d6-459a-8f4d-1cf38b243395.png)
