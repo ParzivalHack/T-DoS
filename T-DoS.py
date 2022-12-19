@@ -139,14 +139,9 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        ip_addr = str(input("Target IP: ")) 
-        stream = os.popen('ping -c 5000 {}'.format(ip_addr))
-        output = stream.read() 
-        if '0 received' in output:
-            print('IP unreachable')
-        else:
-            print('IP reachable')
-            print(output)
+        ip_addr = str(input("Target IP: "))
+	pks = int(input("Packets to send: "))
+        stream = os.system("ping " + ip_addr + " -c " + pks)
     elif option == 5:
         os.system("clear")
         print("  ______    ____       _____")
