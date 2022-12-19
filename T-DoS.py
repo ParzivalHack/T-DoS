@@ -111,7 +111,7 @@ def main():
         print("/_/     /_____/\____/____/  ")
         dstIP = str(input("Target IP: "))
         dstPort = int(input("Target Port (443 suggested): "))
-        counter = int(input("Packets to send (5000 suggested): "))
+        counter = int(input("Number of packets (5000 suggested): "))
         SYN_Flood(dstIP,dstPort,int(counter))
     elif option == 2:
         os.system("clear")
@@ -140,7 +140,7 @@ def main():
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
         ip_addr = str(input("Target IP: "))
-        pks = str(input("Packets to send: "))
+        pks = str(input("Number of packets: "))
         os.system("ping " + ip_addr + " -c " + pks)
     elif option == 5:
         os.system("clear")
