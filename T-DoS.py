@@ -131,7 +131,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-	ip_addr = str(input("Target IP: "))
+        ip_addr = str(input("Target IP: "))
         pks = str(input("Number of packets: "))
         os.system("ping " + ip_addr + " -c " + pks)
     elif option == 4:
