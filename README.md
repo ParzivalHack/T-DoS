@@ -1,4 +1,4 @@
-<a href='https://github.com/ParzivalHack/T-DoS'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Clone&query=count&url=https://gist.githubusercontent.com/MShawon/cf89f3274d06170b8a4973039aa6220a/raw/clone.json&logo=github'></a>
+<a href='https://github.com/ParzivalHack/T-DoS'><img alt='GitHub Clones' src='https://img.shields.io/badge/dynamic/json?color=success&label=Git-Clones&query=count&url=https://gist.githubusercontent.com/ParzivalHack/T-DoS&logo=github'></a>
 # What's a DoS/DDoS attack?
 Distributed Denial Of Service (DDoS) attacks are a subclass of denial of service (DoS) attacks. A DDoS attack involves multiple connected online devices, collectively known as a botnet, which are used to overwhelm a target website with fake traffic.
 
