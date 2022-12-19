@@ -15,7 +15,6 @@ T-DoS is a Multi-Purpose DoS Tool, written in Python 3, right now capable of doi
 # Installation of T-DoS
 * apt update && apt upgrade
 * pip install python
-* pip install python2
 * pip install git
 * pip install scapy
 * git clone https://github.com/ParzivalHack/T-DoS
@@ -41,7 +40,7 @@ Disclaimer: Illecit use of this tool could lead to a violation of federal and lo
 ![image](https://user-images.githubusercontent.com/82817793/208091997-c28d9301-c007-48e4-afc2-62f1ad9aed57.png)
 
 ## Ping Flood:
-*No images avaiable*
+![image](https://user-images.githubusercontent.com/82817793/208422926-9db17aad-02c4-4989-b68c-7d48d9b11003.png)
 
 ## Ping of Death:
 ![image](https://user-images.githubusercontent.com/82817793/208092416-756145a5-28df-4cc2-9981-79cf72fc7294.png)
