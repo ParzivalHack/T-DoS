@@ -140,8 +140,8 @@ def main():
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
         ip_addr = str(input("Target IP: "))
-	pks = int(input("Packets to send: "))
-        stream = os.system("ping " + ip_addr + " -c " + pks)
+        pks = int(input("Packets to send: "))
+        os.system("ping " + ip_addr + " -c " + pks)
     elif option == 5:
         os.system("clear")
         print("  ______    ____       _____")
