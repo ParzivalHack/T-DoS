@@ -182,7 +182,7 @@ def main():
             counter+=1
             while(1):
                 send(fragment)
-    elif options == 8:
+    elif option == 8:
         name = input("Whats your name?: ")
         print("nice to meet you " + name)
         aaa = input("How can i help you today?: ")
