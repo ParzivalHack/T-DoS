@@ -195,7 +195,7 @@ def main():
             victim = str(input("T-DoSBOT: Which IP Address do you want me to DoS?: "))
             print("T-DoSBOT: Ok, I'm gonna DoS " + victim)
             print("T-DoSBOT: Checking if Target is reachable...")
-            ggg = os.system("ping -c 4 " + victim)
+            ggg = os.popen("ping -c 4 " + victim).read()
             if "0 received" in ggg:
                 print("T-DoSBOT: Target is unreachable, exiting...")
                 exit()
