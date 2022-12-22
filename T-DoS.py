@@ -190,7 +190,14 @@ def main():
 		victim = input("Who you want me to DoS?: ")
 		print("Ok, i'm gonna DoS " + victim)
 		time.sleep(2)
-		print("[Menu]")
+		print("      [Menu]      ")
+		print("1) SYN Flood Attack (Doesn't work on Termux)")
+		print("2) HTTP Flood Attack")
+		print("3) Slowloris Ping Attack")
+		print("4) Ping Flood Attack")
+                print("5) Ping of Death Attack (Doesn't work on Termux)")
+                print("6) ICMP Flood Attack (Doesn't work on Termux)")
+                print("7) IP Fragmentation Attack")
 		ccc = input("What DoS attacck do you want me to do? (insert number): ")
 		if ccc == 1:
 			synflood
