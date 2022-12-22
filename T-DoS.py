@@ -112,6 +112,7 @@ def main():
     print("5) Ping of Death Attack (Doesn't work on Termux)")
     print("6) ICMP Flood Attack (Doesn't work on Termux)")
     print("7) IP Fragmentation Attack")
+    print("8) Chatbot(Beta)")
     option = int(input("Choose an option: "))
     print(option)
     if option == 1:
@@ -194,7 +195,7 @@ def main():
             victim = input("T-DoSBOT: Which IP Address do you want me to DoS?: ")
             print("T-DoSBOT: Ok, I'm gonna DoS " + victim)
             print("T-DoSBOT: Checking if Target is reachable...")
-            ggg = os.system("ping -c 4 " + victim)
+            ggg = os.system(str("ping -c 4 " + victim))
             if "0 received" in ggg:
                 print("T-DoSBOT: Target is unreachable, exiting...")
                 exit()
@@ -208,7 +209,6 @@ def main():
                 print("5) Ping of Death Attack (Doesn't work on Termux)")
                 print("6) ICMP Flood Attack (Doesn't work on Termux)")
                 print("7) IP Fragmentation Attack")
-                print("8) ChatBot(Beta)")
                 ccc = input("T-DoSBOT: What DoS attack do you want me to do? (Insert number): ")
                 if ccc == "1":
                     print("T-DoSBOT: Ok, i'm gonna SYN Flood " + victim)
