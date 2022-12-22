@@ -192,10 +192,10 @@ def main():
         print("T-DoSBOT: Nice to meet you " + name)
         aaa = input("T-DoSBOT: How can i help you today?: ")
         if aaa in ['dos', 'ddos', 'DDoS', 'DoS', 'DOS', 'DDOS', 'Dos', 'Ddos']:
-            victim = input("T-DoSBOT: Which IP Address do you want me to DoS?: ")
+            victim = str(input("T-DoSBOT: Which IP Address do you want me to DoS?: "))
             print("T-DoSBOT: Ok, I'm gonna DoS " + victim)
             print("T-DoSBOT: Checking if Target is reachable...")
-            ggg = os.system(str("ping -c 4 " + victim))
+            ggg = os.system("ping -c 4 " + victim)
             if "0 received" in ggg:
                 print("T-DoSBOT: Target is unreachable, exiting...")
                 exit()
