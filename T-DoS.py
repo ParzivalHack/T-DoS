@@ -186,7 +186,7 @@ def main():
         name = input("Whats your name?: ")
         print("nice to meet you " + name)
         aaa = input("How can i help you today?: ")
-        if "ddos" or "dos" or "DDoS" or "DoS" or "Dos" or "Ddos" in aaa:
+        if aaa in ['dos', 'ddos', 'DDoS', 'DoS', 'DOS', 'DDOS', 'Dos', 'Ddos']:
             victim = input("Who you want me to DoS?: ")
             print("Ok, i'm gonna DoS " + victim)
             time.sleep(2)
