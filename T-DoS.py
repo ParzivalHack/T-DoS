@@ -112,7 +112,6 @@ def main():
     print("5) Ping of Death Attack (Doesn't work on Termux)")
     print("6) ICMP Flood Attack (Doesn't work on Termux)")
     print("7) IP Fragmentation Attack")
-    print("8) Chatbot(Beta)")
     option = int(input("Choose an option: "))
     print(option)
     if option == 1:
