@@ -138,8 +138,7 @@ def main():
         print("/_/     /_____/\____/____/  ")
         target = str(input("Target IP: "))
         port = int(input("Target Port (80 suggested): "))
-        Attack(target, port)
-        
+        Attack(target, port) 
     elif option == 3:
         os.system("clear")
         print("  ______    ____       _____")
@@ -159,9 +158,6 @@ def main():
         print("/_/     /_____/\____/____/  ")
         Ping_flood()
     elif option == 5:
-	print("Disclaimer: On Termux this attack doesn't work (unless you are Root)")
-        print("because of socket permissions.")   
-        time.sleep(5)
         os.system("clear")
         print("  ______    ____       _____")
         print(" /_  __/   / __ \____ / ___/")
