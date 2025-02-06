@@ -1,0 +1,14 @@
+# Core Configuration
+whitelist_path: "config/whitelist.txt"
+max_duration: 600  # seconds
+rate_limit: 5000   # packets/second
+
+# API Keys (register for services)
+securitytrails: your_api_key_here
+shodan: your_api_key_here
+
+# Attack Defaults
+default_threads: 100
+syn_flood:
+  packet_size: 64
+  fragments: true
